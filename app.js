@@ -23,3 +23,13 @@ function atualizarLista() {
         lista.appendChild(li);
     }
 }
+function sortearAmigo() {
+    if (amigos.length < 1) {
+        return alert('Adicione amigos para fazer o sorteio!')
+    } else { 
+        let indiceAleatorio = Math.floor(Math.random() * amigos.length);
+        let amigoEscolhido = amigos[indiceAleatorio]
+        let resultado = document.getElementById('resultado')
+        resultado.innerHTML = `Seu amigo secreto é ${amigoEscolhido}`
+    }
+}
